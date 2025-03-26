@@ -1,8 +1,8 @@
-from fastapi import FastAPI, HTTPException, UploadFile, File, Depends
 from typing import List
-from pydantic import BaseModel
-from fastapi.security import OAuth2PasswordBearer
 
+from fastapi import Depends, FastAPI, File, HTTPException, UploadFile
+from fastapi.security import OAuth2PasswordBearer
+from pydantic import BaseModel
 
 app = FastAPI()
 

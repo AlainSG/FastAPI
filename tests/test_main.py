@@ -1,7 +1,8 @@
 # test_main.py
-from fastapi.testclient import TestClient
-from src.main import app, fake_users_db
 import pytest
+from fastapi.testclient import TestClient
+
+from src.main import app, fake_users_db
 
 
 @pytest.fixture
