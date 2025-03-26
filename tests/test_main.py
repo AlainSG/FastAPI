@@ -7,7 +7,8 @@ from src.main import app, fake_users_db
 
 @pytest.fixture
 def reset_db():
-    original_db = {"1": {"name": "Alice", "age": 25}, "2": {"name": "Bob", "age": 30}}
+    original_db = {"1": {"name": "Alice", "age": 25},
+                   "2": {"name": "Bob", "age": 30}}
     fake_users_db.clear()
     fake_users_db.update(original_db)
 
