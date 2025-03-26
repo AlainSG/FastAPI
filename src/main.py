@@ -8,8 +8,7 @@ app = FastAPI()
 
 
 # Base de datos simulada en memoria
-fake_users_db = {"1": {"name": "Alice", "age": 25},
-                 "2": {"name": "Bob", "age": 30}}
+fake_users_db = {"1": {"name": "Alice", "age": 25}, "2": {"name": "Bob", "age": 30}}
 
 
 # Modelo de datos para Usuario
