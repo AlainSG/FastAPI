@@ -6,10 +6,7 @@ import pytest
 
 @pytest.fixture
 def reset_db():
-    original_db = {
-        "1": {"name": "Alice", "age": 25},
-        "2": {"name": "Bob", "age": 30}
-    }
+    original_db = {"1": {"name": "Alice", "age": 25}, "2": {"name": "Bob", "age": 30}}
     fake_users_db.clear()
     fake_users_db.update(original_db)
 
@@ -71,5 +68,3 @@ def test_secure_data_invalid_token():
     headers = {"Authorization": "Bearer invalid-token"}
     response = client.get("/secure-data", headers=headers)
     assert response.status_code == 401
-
-    

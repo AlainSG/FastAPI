@@ -8,10 +8,7 @@ app = FastAPI()
 
 
 # Base de datos simulada en memoria
-fake_users_db = {
-    "1": {"name": "Alice", "age": 25},
-    "2": {"name": "Bob", "age": 30}
-}
+fake_users_db = {"1": {"name": "Alice", "age": 25}, "2": {"name": "Bob", "age": 30}}
 
 
 # Modelo de datos para Usuario
@@ -31,6 +28,7 @@ def fake_decode_token(token: str):
 
 
 # Endpoints
+
 
 @app.get("/users", response_model=List[User])
 def get_users():
