@@ -73,9 +73,3 @@ jobs:
         run: |
           source venv/bin/activate
           pip-audit
-          
-      - name: Run FastAPI server
-        run: |
-            uvicorn main:app --reload
-        env:
-            FLASK_ENV: development
